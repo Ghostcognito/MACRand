@@ -9,7 +9,7 @@ import os, random, re, sys
 
 def getRandom():
     home = expanduser("~")
-    fileName = home+'/tor-browser_en-US/Browser/MACRand/MACFormatted.txt'
+    fileName = home+'/MACInstall/MACFormatted.txt'
     totalBytes = os.stat(fileName).st_size
     randomPoint = random.randint(0, totalBytes)
     file = open(fileName)
