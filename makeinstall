@@ -1,0 +1,7 @@
+# This will need to be run before you can use the 'macauto', 'macback' and
+# 'macshow' tools
+
+sudo ifconfig | grep HWaddr | awk '{print $5}' > ~/MACInstall/MAC.txt
+sudo ln  macauto /usr/local/bin/
+sudo ln  macback /usr/local/bin/
+sudo ln  macshow /usr/local/bin/

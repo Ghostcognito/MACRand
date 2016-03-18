@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sudo ifconfig wlan0 down
+sudo ifconfig wlan0 hw ether "$(< ~/MACInstall/MAC.txt)"
+sudo ifconfig wlan0 up
+echo "Your MAC address has been changed back to:"
+echo "$(< ~/MACInstall/MAC.txt)"

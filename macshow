@@ -1,0 +1,2 @@
+sudo echo "Your MAC address is:"
+sudo ifconfig | grep HWaddr | awk '{print $5}' 

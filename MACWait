@@ -1,0 +1,10 @@
+# From /etc/rc.d/rc.local
+#!/bin/bash
+# This is to be used to change your MAC address and wait before you connect 
+# to the target network
+
+addr=$(~/MACInstall/RandMAC.py)
+
+sudo ifconfig wlan0 down
+sudo ifconfig wlan0 hw ether $addr
+echo "Run 'sudo ifconfig wlan0 up'"

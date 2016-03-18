@@ -1,0 +1,16 @@
+# This script will change your MAC address to a random value from 
+# a list of vendors.
+
+# From /etc/rc.d/rc.local
+
+sudo echo "Your old MAC address is:" 
+sudo ifconfig | grep HWaddr | awk '{print $5}'
+
+addr=$(~/MACInstall/RandMAC.py)
+
+sudo ifconfig wlan0 down
+sudo ifconfig wlan0 hw ether $addr
+sudo ifconfig wlan0 up
+
+echo "Your new MAC address is:"
+sudo ifconfig | grep HWaddr | awk '{print $5}'
