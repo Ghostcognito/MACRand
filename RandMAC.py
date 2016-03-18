@@ -3,9 +3,21 @@
 # This is a random MAC address gen
 # This is to be used with the 'macauto', 'macshow', 'macback' functions
 
+from os.path import expanduser
+
 import os, random, re, sys
 
-from getMAC import getRandom
+def getRandom():
+    home = expanduser("~")
+    fileName = home+'/tor-browser_en-US/Browser/MACRand/MACFormatted.txt'
+    totalBytes = os.stat(fileName).st_size
+    randomPoint = random.randint(0, totalBytes)
+    file = open(fileName)
+    file.seek(randomPoint)
+    file.readline()
+    MAC = file.readline()
+    MAC = MAC.rstrip()
+    return(MAC.lower())
     
 def MACRand():
     """ This makes a random hexvalue, and return it fromatted such xx:xx:xx"""
