@@ -5,12 +5,12 @@ Place this dir the 'MACInstall' in your home dir '~/' or /home/YourUserName/
 
 Run the makeinstall file like so './makeinstall' this should make them 
 exacutable from the terminal. Make sure you have run this first! If you don't
-remeber your mac or it wasn't saved don't worry, just restart your PC.
+remember your MAC address or it wasn't saved don't worry, just restart your PC.
 
 To get a new mac use 'macauto', to go back to your old mac use 'macback',
 to show what your mac is use 'macshow'.
 
-I would recommend running the MACWait while not connected to a network,
+I would recommend running the 'MACWait' while not connected to a network,
 this is due to the DHCP and how it will deal with a 'new' request from 
 what it views as a new host conected to the network. 
 
