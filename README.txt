@@ -15,7 +15,7 @@ this is due to the DHCP and how it will deal with a 'new' request from
 what it views as a new host conected to the network. 
 
 The 'macauto' will automatically assign you a MAC address and the DHCP will
-assing you a new IP address on that network. 
+assign you a new IP address on that network. 
 
 The 'macauto' can be used in conjunction with the tor network. This will mask
 your MAC/IP to the first router. From there the router's MAC/WAN IP addresses
